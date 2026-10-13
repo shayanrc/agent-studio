@@ -1,0 +1,17 @@
+{
+  "name": "agent-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agent Studio — agentic coding + branching chat + spec/plan/task workflow",
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "backend/.venv/bin/python -m uvicorn studio.main:app --reload --app-dir backend --port 8181",
+    "dev:web": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "typecheck": "npm --prefix frontend run typecheck",
+    "test": "backend/.venv/bin/python -m pytest -q backend/tests"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

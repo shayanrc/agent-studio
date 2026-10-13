@@ -1,0 +1,13 @@
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.uv-cache/
+.npm-cache/
+dist/
+data/
+workspace/
+.env
+.DS_Store
+*.log
